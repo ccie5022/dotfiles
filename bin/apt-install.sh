@@ -21,7 +21,6 @@ sudo apt-get install -y \
     openssl \
     open-vm-tools \
     open-vm-tools-desktop \
-    nautilus-dropbox \
     ntp \
     ngrep \
     silversearcher-ag \

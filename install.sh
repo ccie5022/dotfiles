@@ -9,6 +9,11 @@
 if [[ $USER == "root" ]]; then
     "You should not run this as the root user, this configures local user files!"
 fi
+# Temporary Environment Variable.
+export INSTALL_SCRIPT=true
+export PROJECT_BIN_PATH= $PWD/bin    # (NO Trailing Slash!)
+export PROJECT_FILE_PATH=$PWD/files  # (NO Trailing Slash!)
+export PROJECT_TEMP_PATH=$PWD/tmp    # (NO Trailing Slash!)
 
 echo "====================================================================="
 echo ""
