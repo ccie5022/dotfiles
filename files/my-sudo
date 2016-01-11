@@ -1,0 +1,12 @@
+Defaults	env_reset,pwfeedback,timestamp_timeout=30
+# Cmnd alias specification
+Cmnd_Alias APT = /usr/bin/apt-get update,/usr/bin/apt-get upgrade
+Cmnd_Alias UPDATES = /usr/bin/update-manager
+Cmnd_Alias PIP = /usr/bin/pip
+Cmnd_Alias SHUT = /sbin/shutdown, /usr/sbin/reboot
+Cmnd_Alias PAGERS = /usr/bin/more, /usr/bin/less
+Cmnd_Alias MYPROGS = APT,UPDATES,PIP,SHUT,PAGERS
+#
+%admin ALL=(ALL)NOPASSWD:MYPROGS
+%sudo ALL=(ALL)NOPASSWD:MYPROGS
+
