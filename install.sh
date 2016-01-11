@@ -16,6 +16,7 @@ echo ""
 echo " RECOMMENDED: Run 'ppa' first to prevent any problems!"
 echo ""
 echo " * To exit at anytime press CTRL+C"
+echo " * PPA should be installed before base"
 echo " * Select a Package to install (Or, Type A at anytime to install ALL)"
 echo " * Installation runs after command is entered."
 echo ""
@@ -29,17 +30,9 @@ cat <<- command_list
     A           Run All Commands
     ----        --------------------------------
     dot         Copy Dotfiles (.bashrc, .vimrc, .gitconfig, .gitignore)
-    gnome       Install Gnome 3 GUI Tools (You toggle at login or see README)
-    gui         Install Ubuntu GUI Tools (Compiz, Unity Tweak)
-    jre         Install Java Runtime Enviroment (Default)
-    lamp        Install LAMP (apache, php5, mysql)
-    node        Install NodeJS (nodejs, bower, gulp, grunt-cli)
-    perm        Update /usr/local permissions
-    phalcon     Install PhalconPHP (Adds PPA)
     ppa         Install PPAs (nodejs, wine, git, numix icons)
+    base        Install base applications with apt
     py          Install Python (python, python-dev, python-pip)
-    redis       Install Redis (redis-server)
-    util        Install Utilities (vim, git, curl, htop, unzip, terminator, tmux, screen)
     q           Quit (or CTRL + C)
 command_list
 
@@ -66,74 +59,20 @@ read -p "Type a Command: " cmd
             echo "====================================================================="
             echo ""
             ;;
-        gnome)
-            bash ./bin/gnome.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        gui)
-            bash ./bin/gui.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        jre)
-            bash ./bin/jre.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        lamp)
-            bash ./bin/lamp.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        node)
-            bash ./bin/node.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        perm)
-            bash ./bin/perm.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        phalcon)
-            bash ./bin/phalcon.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
         ppa)
             bash ./bin/ppa.sh
             echo ""
             echo "====================================================================="
             echo ""
             ;;
+        base)
+            bash ./bin/apt-install.sh
+            echo ""
+            echo "================Installing Base Apps================================="
+            echo ""
+            ;;
         py)
             bash ./bin/py.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        rb)
-            bash ./bin/rb.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        redis)
-            bash ./bin/redis.sh
-            echo ""
-            echo "====================================================================="
-            echo ""
-            ;;
-        util)
-            bash ./bin/util.sh
             echo ""
             echo "====================================================================="
             echo ""
