@@ -16,8 +16,8 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER="less -X";
 
 
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/user/$(id -u)/bus;
+#export DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/user/$(id -u)/bus;
 
-export TODOTXT_DEFAULT_ACTION=ls
+#export TODOTXT_DEFAULT_ACTION=ls
 
 
