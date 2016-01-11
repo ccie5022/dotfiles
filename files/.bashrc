@@ -21,23 +21,6 @@ HISTSIZE=4096
 HISTFILESIZE=2000
 HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "
 #
-# Exports
-# Prefer US English and use UTF-8
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
-
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="${yellow}";
-
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X";
-
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
-
-#Playing with HISTIGNORE
-# Make some commands not show up in history
-#export HISTIGNORE=" *:ls:cd:cd -:pwd:exit:date:* ";
 
 ####################
 # shopt commands
@@ -126,10 +109,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-# colored GCC warnings and errors
-export #GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
