@@ -12,6 +12,6 @@ sudo apt-get install -y\
 
 # IMPORTANT: Do NOT have a trailing \ on the LAST item!
 
-sudo pip install -r py-require.txt --upgrade
+sudo pip install -r ~/py-require.txt --upgrade
 
 echo "(+) Complete! Run with $ python and $ pip"
