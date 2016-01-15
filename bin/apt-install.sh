@@ -16,6 +16,8 @@ sudo apt-get install -y \
     gnome-tweak-tool \
     htop \
     indent \
+    iucode-tool \
+    intel-microcode \
     light-themes \
     linuxinfo \
     openssl \
