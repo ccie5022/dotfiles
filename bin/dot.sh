@@ -1,16 +1,15 @@
 #/bin/bash
-if [[ ! $INSTALL_SCRIPT ]]; then
-    echo "(!) Error: You must use the ./install.sh script."
-    exit
-fi
-
-cp $PROJECT_FILE_PATH/.aliases ~
-cp $PROJECT_FILE_PATH/.bash_profile ~
-cp $PROJECT_FILE_PATH/.bashrc ~
-cp $PROJECT_FILE_PATH/.exports ~
-cp $PROJECT_FILE_PATH/.functions ~
-cp $PROJECT_FILE_PATH/my-sudo /etc/sudoers.d/
-cp $PROJECT_FILE_PATH/py-require.txt ~
+#if [[ ! $INSTALL_SCRIPT ]]; then
+#    echo "(!) Error: You must use the ./install.sh script."
+#    exit
+#fi
+cp ~/github/dotfiles/files/.aliases ~
+cp ~/github/dotfiles/files/.bash_profile ~
+cp ~/github/dotfiles/files/.bashrc ~
+cp ~/github/dotfiles/files/.exports ~
+cp ~/github/dotfiles/files/.functions ~
+#cp ~/github/dotfiles/files/my-sudo /etc/sudoers.d/
+#cp ~/github/dotfiles/files/py-require.txt ~
 
 # Reload Bash Config
 source ~/.bashrc
