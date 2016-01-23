@@ -1,6 +1,6 @@
 Defaults	env_reset,pwfeedback,timestamp_timeout=30
 # Cmnd alias specification
-Cmnd_Alias APT = /usr/bin/apt-get update,/usr/bin/apt-get upgrade,/usr/bin/apt-get install,/usr/bin/apt-get autoremove,/usr/bin/apt-get autoclean,/usr/bin/apt-get clean
+Cmnd_Alias APT = /usr/bin/apt-get update,/usr/bin/apt-get upgrade,/usr/bin/apt-get install,/usr/bin/apt-get autoremove,/usr/bin/apt-get purge,/usr/bin/apt-get autoclean,/usr/bin/apt-get clean
 Cmnd_Alias UPDATES = /usr/bin/update-manager
 Cmnd_Alias PIP = /usr/bin/pip
 Cmnd_Alias SHUT = /sbin/shutdown, /usr/sbin/reboot
