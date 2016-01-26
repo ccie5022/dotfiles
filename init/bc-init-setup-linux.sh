@@ -2,12 +2,6 @@
 
 ## initial setup script
 
-UNAME=`uname`
-cd $HOME
-#
-mkdir -pv ~/bin
-mkdir -pv ~/github
-
 # Install the Repositories and Apps I need
 #
 echo "Adding Respositories"
