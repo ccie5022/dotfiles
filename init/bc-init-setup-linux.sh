@@ -31,3 +31,9 @@ echo "Configuring Git"
 git config --global user.name "ccie5022"
 git config --global user.email billyc5022@gmail.com
 git config --global push.default simple
+#
+# Fixing Swappines
+echo "Fixing Swappines"
+sudo su
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+echo "vm.vfs_cache_pressure = 50" >> /etc/sysctl.conf
