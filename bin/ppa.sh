@@ -1,11 +1,11 @@
 #/bin/bash
 # This should come first for PPA's
-if [[ ! $INSTALL_SCRIPT ]]; then
-    echo "(!) Error: You must use the ./install.sh script."
-    exit
-fi
+#if [[ ! $INSTALL_SCRIPT ]]; then
+#    echo "(!) Error: You must use the ./install.sh script."
+#    exit
+#fi
 
-sources=(git-core ansible numix)
+sources=(git-core ansible)
 echo "(+) Removing and Re-Adding Sources List"
 
 for s in $sources; do
@@ -14,6 +14,8 @@ for s in $sources; do
     fi
     sudo add-apt-repository -y ppa:$s
 done
+# Other PPAs
+sudo add-apt-repository -y ppa:webupd8team/atom
 
 echo "(+) Updating Sources List"
 sudo apt-get update
