@@ -1,5 +1,5 @@
 #!/bin/bash
-# Fixing Swappines
+# Fixing Swappines - Version bump
 
 sudo su
 echo "Fixing Swappines"
