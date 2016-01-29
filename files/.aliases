@@ -1,52 +1,52 @@
 #!/bin/bash
 #
 # Restart BASH
-alias newbash='. ~/.bashrc'
+alias newbash=". ~/.bashrc"
 
 # Navigation
-alias ..='cd ..'
-alias ...='cd ../..'
+alias ..="cd .."
+alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias dl="cd ~/Downloads"
-alias root='sudo su'
+alias root="sudo su"
 alias o="gnome-open "
-alias df='df -h'
-alias h='history'
-alias lls='ls -alSr | more'
-alias ll='ls -alF | more'
-alias kk='ls -alF | more'
-alias la='ls -A'
-alias l='ls -CF'
-alias r='fc -s'
-
+alias df="df -h"
+alias h="history"
+alias lls="ls -alSr | more"
+alias ll="ls -alF | more"
+alias kk="ls -alF | more"
+alias la="ls -A"
+alias l="ls -CF"
+alias r="fc -s"
+alias cdan="cd /usr/share/ansible/"
 
 # Apt
-alias agi='sudo apt-get install'
-alias agr='sudo apt-get remove'
-alias agu='sudo apt-get update'
-alias agg='sudo apt-get upgrade'
-alias sources='gksudo gedit /etc/apt/sources.list'
-alias apt-get='sudo apt-get'
-alias update='sudo apt-get update && sudo apt-get upgrade'
+alias agi="sudo apt-get install"
+alias agr="sudo apt-get remove"
+alias agu="sudo apt-get update"
+alias agg="sudo apt-get upgrade"
+alias sources="gksudo gedit /etc/apt/sources.list"
+alias apt-get="sudo apt-get"
+alias update="sudo apt-get update && sudo apt-get upgrade"
 
 # https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions
-alias df='df -Tha --total'
+alias df="df -Tha --total"
 alias ps="ps auxf"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias wget="wget -c"
 alias myip="curl http://ipecho.net/plain; echo"
 
 #misc
-alias j='jobs -l'
+alias j="jobs -l"
 
 
 # Basic Timer
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+alias timer="echo 'Timer started. Stop with Ctrl-D.' && date && time cat && date"
 
 # Network Stuff
-alias ports='netstat -tulanp'
-alias sniff="sudo ngrep -d -t '^(GET|POST) ' 'tcp and port 80'"
+alias ports="netstat -tulanp"
+alias sniff="sudo ngrep -d -t '^(GET|POST) '' 'tcp and port 80"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Intuitive map function
@@ -55,23 +55,23 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias map="xargs -n1"
 
 # copy working directory
-alias cwd='pwd | tr -d "\r\n" | xclip -selection clipboard'
+alias cwd="pwd | tr -d "\r\n" | xclip -selection clipboard"
 
 # copy file interactive
-alias cp='cp -i'
+alias cp="cp -i"
 
 # move file interactive
-alias mv='mv -i'
+alias mv="mv -i"
 
 # untar
-alias untar='tar xvf'
+alias untar="tar xvf"
 
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+alias chromekill="ps ux | grep "[C]hrome Helper --type=renderer" | grep -v extension-process | tr -s " " | cut -d " " -f2 | xargs kill"
 
-alias pdw='pwd'
+alias pdw="pwd"
 
-alias showin='dpkg --get-selections | grep -v deinstall | more'
+alias showin="dpkg --get-selections | grep -v deinstall | more"
 
