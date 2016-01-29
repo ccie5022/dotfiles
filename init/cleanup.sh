@@ -45,6 +45,9 @@ echo -e "Emptying the trashes..."
 rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
 rm -rf /root/.local/share/Trash/*/** &> /dev/null
 
+echo -e "Deleting backup  '~' files"
+find /. -type f -name '*~' -exec rm -f '{}' \;
+
 echo -e "Apt cleanup finished!"
 
 # Rotate the logs
