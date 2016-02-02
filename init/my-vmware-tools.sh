@@ -52,7 +52,7 @@ no
 __ANSWER__
 
 # Install VMware Tools and redirecting the silent instlal file
-./vmware-install.pl < /tmp/answer
+./vmware-install.pl -f < /tmp/answer
 
 # Final clean up
 rm -rf vmware-tools-distrib/
