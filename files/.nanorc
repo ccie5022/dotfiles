@@ -1,0 +1,117 @@
+# Use auto-indentation
+set autoindent
+
+# Backup files to filename~
+set backup
+set backupdir "/home/wcarter/.nano-backups"
+
+# Use cut to end of line with ^K by default
+set cut
+
+# Brackets
+set brackets ""')>]}"
+set matchbrackets "(<[{)>]}"
+
+#When Home is pressed anywhere but at the very  beginning  of  non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards).
+set smarthome
+
+# Enable ~/.nano_history for saving and reading search/replace strings.
+# set historylog
+
+# Don't convert files from DOS/Mac format
+set noconvert
+
+# Don't follow symlinks when writing files
+# set nofollow
+
+# Don't display the help lists at the bottom of the screen
+# set nohelp
+
+# Don't wrap text at all
+set nowrap
+
+# Use smooth scrolling as the default
+set smooth
+
+# Use this spelling checker instead of the internal one.  This option
+# does not properly have a default value.
+set speller "aspell -c"
+
+# Allow nano to be suspended with ^Z
+# set suspend
+
+# Use this tab size instead of the default; it must be greater than 0
+set tabsize 4
+set tabstospaces
+
+# Save automatically on exit, don't prompt
+# set tempfile
+
+# Enable ~/.nano_history for saving and reading search/replace strings.
+# set historylog
+
+# Disallow file modification, why would you want this in an rc file? ;)
+# set view
+#
+#
+## Includes for Syntax Highlighting
+# Nanorc
+include "/usr/share/nano/nanorc.nanorc"
+
+## Bourne shell scripts
+include "/usr/share/nano/sh.nanorc"
+
+## Perl
+include "/usr/share/nano/perl.nanorc"
+
+## Python
+include "/usr/share/nano/python.nanorc"
+
+## Ruby
+include "/usr/share/nano/ruby.nanorc"
+
+## Java
+include "/usr/share/nano/java.nanorc"
+
+## C
+include "/usr/share/nano/c.nanorc"
+
+## Debian
+include "/usr/share/nano/debian.nanorc"
+
+## HTML
+include "/usr/share/nano/html.nanorc"
+
+## PHP
+include "/usr/share/nano/php.nanorc"
+
+## New Shell
+#include "~/.nano/syntax/shell.nanorc"
+## My Custom
+##
+syntax "aliases" "\.aliases$"
+header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
+icolor brightgreen "^[0-9A-Z_]+\(\)"
+color green "\<(case|do|done|elif|else|esac|exit|fi|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"
+color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
+color green "-[Ldefgruwx]\>"
+color green "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+color brightblue "\<(cat|cd|chmod|chown|cp|echo|env|export|grep|install|let|ln|make|mkdir|mv|rm|sed|set|tar|touch|umask|unset)\>"
+icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+color cyan "(^|[[:space:]])#.*$"
+color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+color ,green "[[:space:]]+$"
+
+# All the BASH types
+syntax "bashrc" "(\.(bashrc|bash_profile|profile|exports|functions|gitconfig|gitignore|gitattributes|desktop|cfg|ini)$)"
+header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
+icolor brightgreen "^[0-9A-Z_]+\(\)"
+color green "\<(case|do|done|elif|else|esac|exit|fi|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"
+color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
+color green "-[Ldefgruwx]\>"
+color green "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+color brightblue "\<(cat|cd|chmod|chown|cp|echo|env|export|grep|install|let|ln|make|mkdir|mv|rm|sed|set|tar|touch|umask|unset)\>"
+icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+color cyan "(^|[[:space:]])#.*$"
+color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+color ,green "[[:space:]]+$"
