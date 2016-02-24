@@ -61,3 +61,4 @@
 *.jar binary
 *.ico binary
 .gitkeep binary
+*.zip binary
