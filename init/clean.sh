@@ -20,6 +20,7 @@ sudo apt purge -y $OLDCONF
 
 # Rotate the logs
 echo "Rotating and deleting logs...."
+service rsyslog stop
 find /var/log -type f | while read f; do echo -ne '' > $f; done
 /etc/cron.daily/logrotate
 find /var/log -type f -name "*.gz" -exec rm -f {} \;
@@ -31,5 +32,5 @@ echo "${DISK_USAGE_BEFORE_CLEANUP}"
 
 echo "==> Disk usage after cleanup"
 df -h
-
+service rsyslog start
 exit
