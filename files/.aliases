@@ -35,7 +35,9 @@ alias df='df -Tha --total'
 #alias ps="ps auxf"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias wget="wget -c"
-alias myip="curl http://ipecho.net/plain; echo"
+# IP Address
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 #misc
 alias j='jobs -l'
@@ -46,6 +48,7 @@ alias shut='sudo shutdown now -h'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Network Stuff
+
 alias ports='netstat -tulanp'
 alias sniff="sudo ngrep -d -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
