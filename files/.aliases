@@ -14,9 +14,9 @@ alias o="gnome-open "
 alias df='df -h'
 alias h='history'
 alias lls='ls -alSr | more'
-alias ll='ls -alF | more'
-alias la='ls -A'
-alias lt='ls -alstr'
+alias ll='ls -alh F | more'
+alias la='ls -AGFoh'
+alias lt='ls -Alshtr'
 alias l='ls -CF'
 alias r='fc -s'
 alias pp='cd /usr/local/lib/python2.7/dist-packages/'
@@ -38,6 +38,8 @@ alias wget="wget -c"
 # IP Address
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ifconfig | grep -A 2 eth0 && ifconfig | grep -A 2 wifi"
+
 
 #misc
 alias j='jobs -l'
