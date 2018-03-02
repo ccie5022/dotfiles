@@ -14,8 +14,9 @@ alias o="gnome-open "
 alias df='df -h'
 alias h='history'
 alias lls='ls -alSr | more'
-alias ll='ls -alF | more'
-alias la='ls -A'
+alias ll='ls -alh F | more'
+alias la='ls -AGFoh'
+alias lt='ls -Alshtr'
 alias l='ls -CF'
 alias r='fc -s'
 alias pp='cd /usr/local/lib/python2.7/dist-packages/'
@@ -34,7 +35,11 @@ alias df='df -Tha --total'
 #alias ps="ps auxf"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias wget="wget -c"
-alias myip="curl http://ipecho.net/plain; echo"
+# IP Address
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ifconfig | grep -A 2 eth0 && ifconfig | grep -A 2 wifi"
+
 
 #misc
 alias j='jobs -l'
@@ -45,6 +50,7 @@ alias shut='sudo shutdown now -h'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Network Stuff
+
 alias ports='netstat -tulanp'
 alias sniff="sudo ngrep -d -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
