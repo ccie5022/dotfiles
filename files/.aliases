@@ -10,7 +10,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias dl="cd ~/Downloads"
 alias root='sudo su'
-alias o="gnome-open "
+#alias o="gnome-open "
 alias df='df -h'
 alias h='history'
 alias lls='ls -alSr | more'
@@ -43,7 +43,7 @@ alias localip="ifconfig | grep -A 2 eth0 && ifconfig | grep -A 2 wifi"
 
 #misc
 alias j='jobs -l'
-alias pip='sudo pip'
+#alias pip='sudo pip'
 alias shut='sudo shutdown now -h'
 
 # Basic Timer
